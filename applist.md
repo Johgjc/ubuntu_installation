@@ -38,12 +38,62 @@ sudo apt-get install net-tools
 #lockDialogGroup {
   background: #2c001e url(file:///usr/share/backgrounds/battlefields.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
 }
 ```
 
 保存后重启即可看到修改后的界面
+
+## gnome美化
+
+### 安装gnome-tweaks
+
+```shell
+sudo apt-get install gnome-tweaks
+sudo apt-get install gnome-shell-extensions
+```
+
+安装完之后重启电脑，打开gnome-tweaks就可以看到更多的拓展程序了
+
+### 主题、shell
+
+将gnome主题下载并放入~/.themes文件夹中就可以在主题中看到已经下载的主题了，我使用了类mac主题Mojave
+
+shell主题同主题一起，有了主题同样可以选择shell主题了，我这里还是使用Mojave
+
+### 鼠标、图标
+
+在~/.local/share/icons文件夹中放入鼠标、图标文件`alt+f2`之后就可以在gnome-tweaks中看到新加的图标和光标
+
+鼠标我这里使用了默认的DMZ-Black
+
+图标使用了McMojave-circle
+
+### 安装dashtodock
+
+通过`gnome-shell --version`确定要下载的版本
+
+下载后运行`unzip -c ./openweather-extension@jenslody.de.v94.shell-extension.zip metadata.json`
+
+其中，uuid即为安装包名字`dash-to-dock@micxgx.gmail.com`，将zip解压并将文件夹重命名为`dash-to-dock@micxgx.gmail.com`
+
+然后将文件夹移动至extension目录下`mv dash-to-dock@micxgx.gmail.com ~/.local/share/gnome-extensions/`
+
+最后`alt+f2`输入`r`重启gnome，再打开`gnome-tweaks`就可以看到`dash-to-dock`拓展了
+
+### 安装albert
+
+通过ppa安装albert
+
+* `sudo add-apt-repository ppa:noobslab/macbuntu`
+* `sudo apt-get udpate`
+* `sudo apt-get install albert`
+
+命令行输入albert开启albert，进入设置，hotkey设置为alt+e
+
+进入gnome-tweaks开机启动设置，把albert设置为开机启动
+
 
 ## git配置
 
@@ -93,7 +143,6 @@ ithub.global.ssl.fastly.net    198.27.124.186
 ```
 
 /etc/init.d/networking restart更新hosts文件
-
 
 ## 开发IDE
 
