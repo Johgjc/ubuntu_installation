@@ -227,6 +227,14 @@ Environment:
 
 ```
 
+## 安装atom和juno
+
+* 安装网址`https://docs.junolab.org/latest/man/installation/`
+* 从官网下载ubuntu deb文件并运行`sudo dpkg -i atom.deb`安装atom
+* 安装好atom之后进入settings（ctrl+,）
+* 在install中搜索uber-juno安装juno
+* 安装好之后，在settings中选择packages->julia-client在julia path中输入julia的二进制路径`~/.local/bin/julia`
+
 ## amd3600安装tensorflow
 
 ### 安装tensorflow
